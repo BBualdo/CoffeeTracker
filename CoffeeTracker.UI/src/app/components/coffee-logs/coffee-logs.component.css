@@ -1,3 +1,10 @@
+.coffeeLogs__container {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+
 .coffeeLogs {
   display: flex;
   flex-direction: column;
@@ -7,4 +14,11 @@
 .coffeeLog {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.emptyLogs {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }

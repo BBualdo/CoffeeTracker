@@ -48,3 +48,8 @@ main {
 .merienda {
   font-family: "Merienda", cursive;
 }
+
+.coffeeImage {
+  aspect-ratio: 1/1;
+  width: 200px;
+}

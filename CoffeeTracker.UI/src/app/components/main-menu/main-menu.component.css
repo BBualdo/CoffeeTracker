@@ -15,11 +15,6 @@ h1 {
   font-size: 4rem;
 }
 
-.coffeeImage {
-  aspect-ratio: 1/1;
-  width: 200px;
-}
-
 .menu {
   align-items: center;
   display: flex;
