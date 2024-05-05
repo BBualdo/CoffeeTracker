@@ -7,7 +7,7 @@ import { CoffeeLog } from '../models/CoffeeLog';
 @Injectable({
   providedIn: 'root',
 })
-export class CoffeeLogsServiceService {
+export class CoffeeLogsService {
   private coffeeLogsUrl = 'https://localhost:7091/api/CoffeeLogs';
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
