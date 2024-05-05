@@ -1,5 +1,6 @@
 ﻿using CoffeeTracker.WebAPI.Data;
 using CoffeeTracker.WebAPI.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CoffeeTracker.WebAPI.Repositories;
 
@@ -12,28 +13,32 @@ public class CoffeeRepository : ICoffeeLogsRepository
     _context = context;
   }
 
-  public Task AddAsync(CoffeeLog log)
+  public async Task AddAsync(CoffeeLog log)
   {
-    throw new NotImplementedException();
+    await _context.Records.AddAsync(log);
+    await _context.SaveChangesAsync();
   }
 
-  public Task Delete(CoffeeLog log)
+  public async Task Delete(CoffeeLog log)
   {
-    throw new NotImplementedException();
+    CoffeeLog coffeeLog = await _context.Records.SingleAsync(l => l == log);
+    _context.Records.Remove(log);
+    await _context.SaveChangesAsync();
   }
 
-  public Task<IEnumerable<CoffeeLog>> GetAllAsync()
+  public async Task<IEnumerable<CoffeeLog>> GetAllAsync()
   {
-    throw new NotImplementedException();
+    return await _context.Records.ToListAsync();
   }
 
-  public Task<CoffeeLog> GetByIdAsync(int id)
+  public async Task<CoffeeLog?> GetByIdAsync(int id)
   {
-    throw new NotImplementedException();
+    return await _context.Records.FindAsync(id);
   }
 
-  public Task UpdateAsync(CoffeeLog log)
+  public async Task UpdateAsync(CoffeeLog log)
   {
-    throw new NotImplementedException();
+    _context.Entry(log).State = EntityState.Modified;
+    await _context.SaveChangesAsync();
   }
 }
