@@ -1,4 +1,5 @@
 using CoffeeTracker.WebAPI.Data;
+using CoffeeTracker.WebAPI.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,7 @@ builder.Services.AddDbContext<CoffeeTrackerContext>(options =>
 {
   options.UseNpgsql(builder.Configuration.GetConnectionString("Default"));
 });
+builder.Services.AddScoped<ICoffeeLogsRepository, CoffeeLogsRepository>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

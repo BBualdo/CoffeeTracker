@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CoffeeTracker.WebAPI.Repositories;
 
-public class CoffeeRepository : ICoffeeLogsRepository
+public class CoffeeLogsRepository : ICoffeeLogsRepository
 {
   private readonly CoffeeTrackerContext _context;
 
-  public CoffeeRepository(CoffeeTrackerContext context)
+  public CoffeeLogsRepository(CoffeeTrackerContext context)
   {
     _context = context;
   }
@@ -19,7 +19,7 @@ public class CoffeeRepository : ICoffeeLogsRepository
     await _context.SaveChangesAsync();
   }
 
-  public async Task Delete(CoffeeLog log)
+  public async Task DeleteAsync(CoffeeLog log)
   {
     CoffeeLog coffeeLog = await _context.Records.SingleAsync(l => l == log);
     _context.Records.Remove(log);

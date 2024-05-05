@@ -8,5 +8,5 @@ public interface ICoffeeLogsRepository
   Task<CoffeeLog?> GetByIdAsync(int id);
   Task AddAsync(CoffeeLog log);
   Task UpdateAsync(CoffeeLog log);
-  Task Delete(CoffeeLog log);
+  Task DeleteAsync(CoffeeLog log);
 }
