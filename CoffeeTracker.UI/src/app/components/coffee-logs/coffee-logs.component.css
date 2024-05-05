@@ -1,0 +1,10 @@
+.coffeeLogs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.coffeeLog {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}

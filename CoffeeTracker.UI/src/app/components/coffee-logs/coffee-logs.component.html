@@ -1,3 +1,13 @@
-<ul *ngFor="let log of coffeeLogs">
-  <li>{{ log.id }}</li>
+<div>
+  <h2>Your Coffee Logs:</h2>
+</div>
+
+<ul class="coffeeLogs">
+  <li *ngFor="let log of coffeeLogs">
+    <a class="coffeeLog">
+      <div>{{ log.id }}</div>
+      <div>{{ formatDate(log) }}</div>
+      <div>{{ log.quantity }} Cups</div>
+    </a>
+  </li>
 </ul>

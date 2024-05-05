@@ -20,4 +20,14 @@ export class CoffeeLogsComponent {
       .getCoffeeLogs()
       .subscribe((logs) => (this.coffeeLogs = logs));
   }
+
+  formatDate(coffeeLog: CoffeeLog): string {
+    const date = new Date(coffeeLog.date);
+
+    const day = date.getDate().toString().padStart(2, '0');
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const year = date.getFullYear();
+
+    return `${day}.${month}.${year}`;
+  }
 }
