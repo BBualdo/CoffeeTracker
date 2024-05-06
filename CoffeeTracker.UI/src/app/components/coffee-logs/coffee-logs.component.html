@@ -3,12 +3,12 @@
     <h2>Your Coffee Logs:</h2>
   </div>
   <div class="coffee-logs__box">
+    <div class="coffee-log__header">
+      <div>#</div>
+      <div>Date</div>
+      <div>Cups</div>
+    </div>
     <ul class="coffee-logs">
-      <li class="coffee-log__header">
-        <div>#</div>
-        <div>Date</div>
-        <div>Cups</div>
-      </li>
       <li *ngFor="let log of coffeeLogs; let i = index">
         <a class="coffee-log">
           <div>{{ i + 1 }}</div>

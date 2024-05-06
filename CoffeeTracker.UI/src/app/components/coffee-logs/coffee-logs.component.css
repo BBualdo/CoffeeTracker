@@ -12,12 +12,15 @@ h2 {
 }
 
 .coffee-log__header {
-  border-bottom: 2px solid black;
+  border-bottom: 8px solid black;
   color: black;
   display: grid;
+  font-size: 1.25rem;
+  font-weight: bold;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   padding: 8px 20px;
   text-transform: uppercase;
+  width: 100%;
 }
 
 .coffee-logs__box {
