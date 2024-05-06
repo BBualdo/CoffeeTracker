@@ -1,5 +1,6 @@
 :root {
   --darkCoffee: #361701;
+  --darkCoffeeHover: #6b2d00;
   --pumpkinLatte: #bd4f00;
   --pumpkinLatteHover: #ff9244;
   --lightPumpkin: #faa569;
@@ -7,7 +8,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Merienda", cursive;
   margin: 0;
   padding: 0;
 }
@@ -45,11 +46,28 @@ main {
   top: 8px;
 }
 
-.merienda {
-  font-family: "Merienda", cursive;
-}
-
-.coffeeImage {
+.coffee__image {
   aspect-ratio: 1/1;
   width: 200px;
+}
+
+.add__btn {
+  align-items: center;
+  background-color: var(--darkCoffee);
+  border: none;
+  border-radius: 100%;
+  bottom: -32px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 3rem;
+  height: 60px;
+  justify-content: center;
+  position: absolute;
+  width: 60px;
+}
+
+.add__btn:hover {
+  background-color: var(--darkCoffeeHover);
+  box-shadow: 0 0 20px var(--darkCoffeeHover);
 }

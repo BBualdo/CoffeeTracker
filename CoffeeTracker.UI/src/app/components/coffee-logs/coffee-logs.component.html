@@ -1,21 +1,23 @@
 <div *ngIf="coffeeLogs.length" class="coffee-logs__container">
-  <div class="coffee-logs">
-    <div class="coffee-logs__banner">
-      <h2>Your Coffee Logs:</h2>
-    </div>
-    <ul>
+  <div class="coffee-logs__banner">
+    <h2>Your Coffee Logs:</h2>
+  </div>
+  <div class="coffee-logs__box">
+    <ul class="coffee-logs">
       <li class="coffee-log__header">
         <div>#</div>
         <div>Date</div>
         <div>Cups</div>
       </li>
-      <li *ngFor="let log of coffeeLogs">
+      <li *ngFor="let log of coffeeLogs; let i = index">
         <a class="coffee-log">
-          <div>{{ log.id }}</div>
+          <div>{{ i + 1 }}</div>
           <div>{{ formatDate(log) }}</div>
-          <div>{{ log.quantity }} Cups</div>
+          <div>{{ log.quantity }}</div>
         </a>
       </li>
     </ul>
+
+    <button class="add__btn">+</button>
   </div>
 </div>
