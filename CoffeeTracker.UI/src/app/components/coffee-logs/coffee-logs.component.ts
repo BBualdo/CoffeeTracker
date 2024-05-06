@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CoffeeLog } from '../../models/CoffeeLog';
 import { CoffeeLogsService } from '../../services/coffee-logs.service';
 import { NgFor, NgIf } from '@angular/common';
+import { EmptyLogsComponent } from '../empty-logs/empty-logs.component';
 
 @Component({
   selector: 'app-coffee-logs',
   standalone: true,
-  imports: [NgFor, NgIf],
+  imports: [NgFor, NgIf, EmptyLogsComponent],
   templateUrl: './coffee-logs.component.html',
   styleUrl: './coffee-logs.component.css',
 })

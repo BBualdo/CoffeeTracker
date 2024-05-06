@@ -1,4 +1,4 @@
-<div class="loading__backdrop">
+<div *ngIf="loading$ | async" class="loading__backdrop">
   <div class="loading__content">
     <img alt="" src="../../../assets/cookie.png" class="cookie" />
     <p>Loading...</p>

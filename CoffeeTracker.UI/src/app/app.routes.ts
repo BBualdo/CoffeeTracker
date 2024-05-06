@@ -3,6 +3,7 @@ import { CoffeeLogsComponent } from './components/coffee-logs/coffee-logs.compon
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
 
 export const routes: Routes = [
-  { path: '', component: MainMenuComponent },
-  { path: 'dashboard', component: CoffeeLogsComponent },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component: MainMenuComponent },
+  { path: 'coffee-logs', component: CoffeeLogsComponent },
 ];

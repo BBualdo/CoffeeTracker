@@ -1,5 +1,4 @@
-<div class="coffee-logs__container">
-  @if (coffeeLogs.length) {
+<div *ngIf="coffeeLogs.length" class="coffee-logs__container">
   <div class="coffee-logs">
     <div class="coffee-logs__banner">
       <h2>Your Coffee Logs:</h2>
@@ -19,13 +18,4 @@
       </li>
     </ul>
   </div>
-
-  } @else {
-  <div class="empty-logs">
-    <img alt="" src="../../../assets/coffee2.png" class="coffeeImage" />
-    <h2>You have not registered any drinked coffee yet.</h2>
-    <!--TODO: Add (click) event-->
-    <button class="primary__btn">Do it now</button>
-  </div>
-  }
 </div>

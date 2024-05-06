@@ -36,13 +36,6 @@
   padding: 20px;
 }
 
-.empty-logs {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
 ul {
   color: white;
   display: flex;
