@@ -1,24 +1,54 @@
-.coffeeLogs__container {
+.coffee-logs__container {
   align-items: center;
   display: flex;
   height: 100%;
   justify-content: center;
 }
 
-.coffeeLogs {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.coffee-logs {
+  border: 4px solid white;
+  min-height: 400px;
+  max-height: 600px;
+  overflow-x: auto;
+  padding: 40px;
+  width: 1000px;
 }
 
-.coffeeLog {
+.coffee-log__header {
+  border: 2px solid black;
+  color: black;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  background-color: white;
+  border-radius: 24px;
+  box-shadow: 0 4px 0 black;
+  padding: 20px;
+  text-transform: uppercase;
 }
 
-.emptyLogs {
+.coffee-log {
+  border: 2px solid white;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  background-color: var(--pumpkinLatte);
+  border-radius: 24px;
+  box-shadow: 0 4px 0 white;
+  padding: 20px;
+}
+
+.empty-logs {
   align-items: center;
   display: flex;
   flex-direction: column;
+  gap: 20px;
+}
+
+ul {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.25rem;
+  font-weight: bold;
+  list-style: none;
   gap: 20px;
 }

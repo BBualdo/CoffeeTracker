@@ -1,19 +1,27 @@
-<div class="coffeeLogs__container">
+<div class="coffee-logs__container">
   @if (coffeeLogs.length) {
-  <div>
-    <h2>Your Coffee Logs:</h2>
+  <div class="coffee-logs">
+    <div class="coffee-logs__banner">
+      <h2>Your Coffee Logs:</h2>
+    </div>
+    <ul>
+      <li class="coffee-log__header">
+        <div>#</div>
+        <div>Date</div>
+        <div>Cups</div>
+      </li>
+      <li *ngFor="let log of coffeeLogs">
+        <a class="coffee-log">
+          <div>{{ log.id }}</div>
+          <div>{{ formatDate(log) }}</div>
+          <div>{{ log.quantity }} Cups</div>
+        </a>
+      </li>
+    </ul>
   </div>
-  <ul class="coffeeLogs">
-    <li *ngFor="let log of coffeeLogs">
-      <a class="coffeeLog">
-        <div>{{ log.id }}</div>
-        <div>{{ formatDate(log) }}</div>
-        <div>{{ log.quantity }} Cups</div>
-      </a>
-    </li>
-  </ul>
+
   } @else {
-  <div class="emptyLogs">
+  <div class="empty-logs">
     <img alt="" src="../../../assets/coffee2.png" class="coffeeImage" />
     <h2>You have not registered any drinked coffee yet.</h2>
     <!--TODO: Add (click) event-->
