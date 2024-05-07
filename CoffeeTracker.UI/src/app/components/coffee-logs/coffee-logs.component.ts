@@ -3,18 +3,23 @@ import { CoffeeLog } from '../../models/CoffeeLog';
 import { CoffeeLogsService } from '../../services/coffee-logs.service';
 import { NgFor, NgIf } from '@angular/common';
 import { EmptyLogsComponent } from '../empty-logs/empty-logs.component';
+import { AddFormComponent } from '../add-form/add-form.component';
+import { AddModalService } from '../../services/add-modal.service';
 
 @Component({
   selector: 'app-coffee-logs',
   standalone: true,
-  imports: [NgFor, NgIf, EmptyLogsComponent],
   templateUrl: './coffee-logs.component.html',
   styleUrl: './coffee-logs.component.css',
+  imports: [NgFor, NgIf, EmptyLogsComponent, AddFormComponent],
 })
 export class CoffeeLogsComponent {
   coffeeLogs: CoffeeLog[] = [];
 
-  constructor(private coffeeLogsService: CoffeeLogsService) {}
+  constructor(
+    private coffeeLogsService: CoffeeLogsService,
+    private addModalService: AddModalService
+  ) {}
 
   ngOnInit(): void {
     this.coffeeLogsService
@@ -30,5 +35,9 @@ export class CoffeeLogsComponent {
     const year = date.getFullYear();
 
     return `${day}.${month}.${year}`;
+  }
+
+  openModal(): void {
+    this.addModalService.openModal();
   }
 }

@@ -33,7 +33,7 @@ h2 {
 }
 
 .coffee-logs {
-  max-height: 600px;
+  max-height: 400px;
   min-height: 400px;
   overflow-y: auto;
   padding-bottom: 20px;

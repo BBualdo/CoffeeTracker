@@ -1,3 +1,5 @@
+<app-add-form></app-add-form>
+
 <div *ngIf="coffeeLogs.length" class="coffee-logs__container">
   <div class="coffee-logs__banner">
     <h2>Your Coffee Logs:</h2>
@@ -18,6 +20,6 @@
       </li>
     </ul>
 
-    <button class="add__btn">+</button>
+    <button (click)="this.openModal()" class="add__btn">+</button>
   </div>
 </div>

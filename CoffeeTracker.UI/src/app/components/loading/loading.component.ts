@@ -30,15 +30,9 @@ export class LoadingComponent {
 
   navigationInterceptor(event: Event): void {
     if (event instanceof NavigationStart) {
-      this.loadingService.loading$.subscribe((isLoading) =>
-        console.log(isLoading + ' from NavigationStart')
-      );
       this.loadingService.loadingOn();
     }
     if (event instanceof NavigationEnd) {
-      this.loadingService.loading$.subscribe((isLoading) =>
-        console.log(isLoading + ' from NavigationEnd')
-      );
       this.loadingService.loadingOff();
     }
 
