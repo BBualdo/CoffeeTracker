@@ -1,0 +1,13 @@
+@if (coffeeLogs$ | async; as coffeeLogs) {
+  @if (coffeeLogs.length > 0) {
+    @for (log of coffeeLogs; track $index) {
+      <div class="logs">
+        <div>{{ $index + 1 }}</div>
+        <div>{{ log.date }}</div>
+        <div>{{ log.quantity }}</div>
+      </div>
+    }
+  } @else {
+    <p>No logs.</p>
+  }
+}

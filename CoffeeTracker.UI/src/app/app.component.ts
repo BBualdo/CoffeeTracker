@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { CoffeeLogsComponent } from './coffee-logs/coffee-logs.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  imports: [RouterOutlet, CoffeeLogsComponent],
 })
-export class AppComponent {
-  title = 'CoffeeTracker.UI';
-}
+export class AppComponent {}
