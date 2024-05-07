@@ -8,10 +8,15 @@
         </div>
         <div>
           <label for="coffeeLogQuantity">Number of cups</label>
-          <input type="number" />
+          <input type="number" id="coffeeLogQuantity" #coffeeLogQuantity />
         </div>
       </div>
-      <button class="primary__btn">Add Coffee Log</button>
+      <button
+        class="primary__btn"
+        (click)="addLog(coffeeLogDate.value, coffeeLogQuantity.value)"
+      >
+        Add Coffee Log
+      </button>
     </div>
   </div>
 </div>
