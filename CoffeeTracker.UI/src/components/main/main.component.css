@@ -1,3 +1,27 @@
+@media (max-width: 620px) {
+  .logo {
+    gap: 4px;
+  }
+
+  .logo {
+    flex-direction: column;
+  }
+
+  .logo > h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 621px) {
+  .logo {
+    gap: 20px;
+  }
+
+  .logo > h1 {
+    font-size: 4rem;
+  }
+}
+
 .container {
   align-items: center;
   display: flex;
@@ -10,12 +34,10 @@
 .logo {
   align-items: center;
   display: flex;
-  gap: 20px;
 }
 
 .logo > h1 {
   color: white;
   font-family: "Pacifico", cursive;
-  font-size: 4rem;
   text-shadow: 4px 4px 10px var(--darkCoffee);
 }

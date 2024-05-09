@@ -11,6 +11,8 @@
   --pumpkinLatte: #bd4f00;
   --pumpkinLatteHover: #ff9244;
   --lightPumpkin: #faa569;
+
+  font-size: 100%;
 }
 
 body {
@@ -21,8 +23,16 @@ main {
   height: 100vh;
 }
 
-.coffee-image {
-  width: 200px;
+@media (max-width: 620px) {
+  .coffee-image {
+    width: 160px;
+  }
+}
+
+@media (min-width: 621px) {
+  .coffee-image {
+    width: 200px;
+  }
 }
 
 .primary__btn {
