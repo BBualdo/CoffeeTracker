@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable, Subject, map } from 'rxjs';
 import { CoffeeLog } from '../models/CoffeeLog';
 
 @Injectable({
@@ -13,5 +13,9 @@ export class CoffeeService {
 
   getLogs(): Observable<CoffeeLog[]> {
     return this.http.get<CoffeeLog[]>(this.url);
+  }
+
+  addLog(log: CoffeeLog): Observable<CoffeeLog> {
+    return this.http.post<CoffeeLog>(this.url, log);
   }
 }

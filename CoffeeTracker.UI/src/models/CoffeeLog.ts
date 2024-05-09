@@ -1,5 +1,5 @@
 export interface CoffeeLog {
   id?: number;
-  date: Date;
+  date: string;
   quantity: number;
 }

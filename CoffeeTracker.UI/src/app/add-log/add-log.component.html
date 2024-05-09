@@ -1,0 +1,13 @@
+<h2>Add Coffee Log</h2>
+<form (ngSubmit)="onFormSubmit()" [formGroup]="addLogForm">
+  <div>
+    <label for="date">Date</label>
+    <input type="date" formControlName="date" />
+  </div>
+  <div>
+    <label for="quantity">Cups</label>
+    <input type="number" formControlName="quantity" />
+  </div>
+
+  <button type="submit">Add</button>
+</form>
